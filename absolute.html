@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posicionamiento Absoluto</title>
+    <style>
+        .contenedor {
+            width: 300px;
+            height: 200px;
+            border: 2px solid black;
+            position: relative; /* El contenedor está posicionado */
+        }
+        .absoluta {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 100px;
+            height: 100px;
+            background-color: lightcoral;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="contenedor">
+        <div class="absoluta">Absoluta</div>
+    </div>
+
+</body>
+</html>

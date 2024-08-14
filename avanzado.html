@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Web con Posicionamiento Avanzado</title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000; /* Asegura que el header esté siempre encima */
+        }
+
+        nav {
+            background-color: #444;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            position: sticky;
+            top: 60px; /* Se pega justo debajo del header */
+            z-index: 999;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        main {
+            margin-top: 120px; /* Compensa el espacio ocupado por el header fijo */
+            display: flex;
+        }
+
+        section {
+            flex: 2;
+            padding: 20px;
+            position: relative; /* Para elementos absolutos */
+        }
+
+        aside {
+            flex: 1;
+            padding: 20px;
+            background-color: #f4f4f4;
+            position: fixed;
+            right: 0;
+            top: 120px; /* Justo debajo del header */
+            height: 100%; /* Se extiende a lo largo de la pantalla */
+        }
+
+        article {
+            margin-bottom: 40px;
+        }
+
+        .relativo {
+            position: relative;
+            top: 10px;
+            left: 10px;
+            background-color: #ffd700;
+            padding: 10px;
+            border: 1px solid #333;
+        }
+
+        .absoluto {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            background-color: #ff6347;
+            padding: 10px;
+            color: white;
+            border-radius: 5px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+            position: static; /* El footer permanece en la parte inferior del contenido */
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Mi Sitio Web Avanzado</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Noticias</a></li>
+            <li><a href="#">Contacto</a></li>
+            <li><a href="#">Sobre Nosotros</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <article>
+                <h2>Artículo 1</h2>
+                <p>Este es el primer artículo. Tiene un elemento posicionado de manera relativa.</p>
+                <div class="relativo">Elemento Relativo</div>
+            </article>
+
+            <article>
+                <h2>Artículo 2</h2>
+                <p>Este es el segundo artículo. Contiene un elemento con posicionamiento absoluto que se encuentra dentro del contenedor.</p>
+                <div class="absoluto">Elemento Absoluto</div>
+            </article>
+        </section>
+
+        <aside>
+            <h2>Barra Lateral</h2>
+            <p>Contenido fijo en la barra lateral que se mantiene al hacer scroll.</p>
+        </aside>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Mi Sitio Web. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>

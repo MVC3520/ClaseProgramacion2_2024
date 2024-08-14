@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posicionamiento Fijo</title>
+    <style>
+        header {
+            width: 100%;
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+        .contenido {
+            margin-top: 60px; /* Da espacio al contenido para evitar que el header lo cubra */
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        Encabezado Fijo
+    </header>
+
+    <div class="contenido">
+        <p>Contenido de la página que se desplaza al hacer scroll.</p>
+        <p>...</p>
+        <!-- Agrega más contenido para que aparezca el scroll -->
+        <p>Este encabezado se mantendrá en su lugar al desplazarse.</p>
+    </div>
+
+</body>
+</html>
